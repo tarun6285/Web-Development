@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="demohibernatecomponent.CEmp" table="emp">
+        <id column="id" name="id" type="int">
+            <generator class="assigned"/>
+        </id>
+        <property column="name" name="name" type="string"/>
+        <component name="Address" class="demohibernatecomponent.CAddress">
+            <property name="city" column="city" type="string" />
+            <property name="state" column="state" type="string" />
+            <property name="country" column="country" type="string" />
+        </component>
+    </class>
+</hibernate-mapping>

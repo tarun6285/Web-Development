@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="democompositekey.Empdept" table="empdept">
+        <composite-id name="id" class="democompositekey.EmpdeptId">
+            <key-property name="empId" type="int" column="empId"/>
+            <key-property name="deptId" type="int" column="deptId" />
+        </composite-id>
+        <property name="role" type="string" column="role"/>
+    
+</class>
+</hibernate-mapping>
